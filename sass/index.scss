@@ -1,0 +1,45 @@
+:root {
+  --color-dark-pink: #ba4270;
+  --color-water-white: #fbfcfe;
+  --color-blue-1: #6c8294;
+  --color-blue-2: #36536b;
+  --color-dark-blue: #1b262f;
+  --color-charm-pink: #da6d97;
+
+  --ff-heading: "DM Serif Display", serif;
+  --ff-body: "Public Sans", sans-serif;
+
+  --fw-1: 400;
+  --fw-2: 700;
+
+  --fs-1: 0.9375rem;
+  --fs-2: 1.125rem;
+  --fs-3: 1.5rem;
+  --fs-4: 2rem;
+  --fs-5: 3rem;
+  --fs-6: 3.5rem;
+  --fs-7: 4.5rem;
+
+  --lh-p: 1.75rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-1);
+}
+
+input,
+button {
+  font: inherit;
+}
