@@ -1,3 +1,5 @@
+@use "./layout/header";
+
 :root {
   --color-dark-pink: #ba4270;
   --color-water-white: #fbfcfe;
@@ -5,6 +7,7 @@
   --color-blue-2: #36536b;
   --color-dark-blue: #1b262f;
   --color-charm-pink: #da6d97;
+  --color-body-bg: #edf3f8;
 
   --ff-heading: "DM Serif Display", serif;
   --ff-body: "Public Sans", sans-serif;
@@ -42,4 +45,8 @@ h4 {
 input,
 button {
   font: inherit;
+}
+
+body {
+  background-color: var(--color-body-bg);
 }

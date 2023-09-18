@@ -1,0 +1,12 @@
+@mixin cta-button {
+  color: var(--color-water-white);
+  background-color: var(--color-dark-pink);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.2s;
+  font-size: var(--fs-1);
+
+  &:hover {
+    background-color: var(--color-charm-pink);
+  }
+}
