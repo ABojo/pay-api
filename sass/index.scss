@@ -1,5 +1,9 @@
 @use "./layout/header";
 
+@use "./pages/home";
+
+@use "./components/demo";
+
 :root {
   --color-dark-pink: #ba4270;
   --color-water-white: #fbfcfe;
@@ -49,4 +53,5 @@ button {
 
 body {
   background-color: var(--color-body-bg);
+  font-family: var(--ff-body);
 }
