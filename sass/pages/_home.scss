@@ -115,7 +115,15 @@
 
 .features {
   @include layout-constrain;
-  padding-block: 6.5rem;
+  padding-top: 6.5rem;
+  position: relative;
+
+  &__dot {
+    position: absolute;
+    z-index: -1;
+    right: -35rem;
+    top: 29rem;
+  }
 
   &__grid {
     display: grid;
