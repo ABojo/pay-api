@@ -51,6 +51,11 @@ button {
   font: inherit;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-body-bg);
   font-family: var(--ff-body);

@@ -5,7 +5,6 @@
   padding-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: relative;
 
   &__heading {
     font-size: var(--fs-7);
@@ -41,7 +40,7 @@
   }
 
   &__dot {
-    position: fixed;
+    position: absolute;
     top: -10rem;
     right: -9rem;
     z-index: -1;
