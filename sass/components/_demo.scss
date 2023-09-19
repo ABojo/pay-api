@@ -1,0 +1,28 @@
+@use "../mixins/" as *;
+
+.demo {
+  position: relative;
+  width: 27.5rem;
+
+  &__input {
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    font-weight: var(--fw-2);
+    padding-left: 1.5rem;
+    padding-right: 4rem;
+    color: var(--color-blue-2);
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+
+    &::placeholder {
+      color: var(--color-blue-1);
+    }
+  }
+
+  &__submit {
+    @include cta-button;
+    position: absolute;
+    right: 0rem;
+  }
+}
