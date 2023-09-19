@@ -1,0 +1,14 @@
+@use "../mixins/" as *;
+
+.ready {
+  @include layout-constrain;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 5.25rem;
+
+  &__heading {
+    font-size: var(--fs-5);
+    color: var(--color-blue-2);
+  }
+}
