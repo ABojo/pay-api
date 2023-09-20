@@ -1,0 +1,95 @@
+@use "../mixins" as *;
+
+.pricing {
+  @include layout-constrain;
+  padding-top: 4.5rem;
+
+  &__heading {
+    font-size: var(--fs-6);
+    color: var(--color-blue-2);
+    margin-bottom: 4rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+
+.package {
+  &__heading {
+    color: var(--color-dark-pink);
+    font-size: var(--fs-4);
+    margin-bottom: 0.75rem;
+  }
+
+  &__description {
+    font-size: var(--fs-1);
+    color: var(--color-blue-1);
+    line-height: var(--lh-p);
+  }
+
+  &__price {
+    margin-top: 0.25rem;
+    font-size: var(--fs-6);
+    color: var(--color-blue-2);
+    font-weight: var(--fw-1);
+    font-family: var(--ff-heading);
+    margin-bottom: 1.3rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    border-top: 1px solid rgba(108, 130, 148, 0.5);
+    border-bottom: 1px solid rgba(108, 130, 148, 0.5);
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-left: 0.1rem;
+    color: var(--color-blue-2);
+
+    &::before {
+      content: "";
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      background-image: url("../images/shared/desktop/icon-check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-right: 1.5rem;
+    }
+
+    &--disabled {
+      color: var(--color-blue-1);
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__request {
+    margin-top: 1.5rem;
+    display: inline-block;
+    color: var(--color-blue-2);
+    text-decoration: none;
+    border: 1px solid var(--color-blue-2);
+    padding: 0.9rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: var(--fw-2);
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-water-white);
+      background-color: var(--color-blue-2);
+    }
+  }
+}
