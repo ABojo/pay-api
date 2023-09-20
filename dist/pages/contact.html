@@ -13,5 +13,137 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>PayAPI - Contact</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <img class="header__dot" src="/images/shared/desktop/bg-pattern-circle.svg" alt="" />
+      <a class="header__logo" href="/" aria-label="Home page">
+        <img src="/images/shared/desktop/logo.svg" alt="PayAPI" />
+      </a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="/pages/pricing.html">Pricing</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/pages/about.html">About</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="/pages/contact.html">Contact</a>
+          </li>
+          <li class="header__item header__item--primary">
+            <a class="header__link" href="#">Schedule a Demo</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contact">
+      <h1 class="contact__heading">Submit a help request and we'll get in touch shortly.</h1>
+      <div class="contact__grid">
+        <form class="contact__form">
+          <div class="contact__fields">
+            <div class="contact__input">
+              <input placeholder="Name" type="text" aria-label="Name" />
+              <p class="contact__error">This field is required</p>
+            </div>
+            <div class="contact__input">
+              <input placeholder="Email Address" type="text" aria-label="Email Address" />
+              <p class="contact__error"></p>
+            </div>
+            <div class="contact__input">
+              <input placeholder="Company Name" type="text" aria-label="Company Name" />
+              <p class="contact__error"></p>
+            </div>
+            <div class="contact__input">
+              <input placeholder="Title" type="text" aria-label="Title" />
+              <p class="contact__error"></p>
+            </div>
+            <div class="contact__input contact__input--area">
+              <textarea placeholder="Message" type="text" aria-label="Message"></textarea>
+              <p class="contact__error"></p>
+            </div>
+          </div>
+          <div class="contact__check">
+            <input id="updates" type="checkbox" />
+            <label for="updates"></label>
+            <p>Stay up-to-date with company announcements and updates to our API</p>
+          </div>
+          <button type="submit" class="contact__submit">Submit</button>
+        </form>
+        <div class="contact__partners">
+          <h2>Join the thousand of innovators already building with us</h2>
+          <div class="contact__logos">
+            <img class="contact__logo" src="/images/shared/desktop/tesla.svg" alt="Tesla" />
+            <img class="contact__logo" src="/images/shared/desktop/microsoft.svg" alt="Microsoft" />
+            <img class="contact__logo" src="/images/shared/desktop/hewlett-packard.svg" alt="HP" />
+            <img class="contact__logo" src="/images/shared/desktop/oracle.svg" alt="Oracle" />
+            <img class="contact__logo" src="/images/shared/desktop/google.svg" alt="Google" />
+            <img class="contact__logo" src="/images/shared/desktop/nvidia.svg" alt="Nvidia" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="ready">
+      <h2 class="ready__heading">Ready to start?</h2>
+      <form class="demo">
+        <input class="demo__input" type="text" placeholder="Enter email address" aria-label="Email Address" />
+        <button type="submit" class="demo__submit">Schedule a Demo</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <img class="footer__dot" src="/images/shared/desktop/bg-pattern-circle.svg" alt="" />
+      <div class="footer__inner">
+        <a class="footer__logo" href="/" aria-label="Home page">
+          <img src="/images/shared/desktop/logo.svg" alt="PayAPI" />
+        </a>
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="/pages/pricing.html">Pricing</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="/pages/about.html">About</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="/pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__socials">
+          <li class="footer__item">
+            <a class="footer__social" href="#" aria-label="PayAPI's Facebook">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__social" href="#" aria-label="PayAPI's Twitter">
+              <svg width="24" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 2.557a9.83 9.83 0 01-2.828.775A4.932 4.932 0 0023.337.608a9.864 9.864 0 01-3.127 1.195A4.916 4.916 0 0016.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 1.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 17.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 2.557z"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__social" href="#" aria-label="PayAPI's LinkedIn">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.6 0H2.4C1.08 0 0 1.08 0 2.4v19.2C0 22.92 1.08 24 2.4 24h19.2c1.32 0 2.4-1.08 2.4-2.4V2.4C24 1.08 22.92 0 21.6 0zM7.2 20.4H3.6V9.6h3.6v10.8zM5.4 7.56c-1.2 0-2.16-.96-2.16-2.16 0-1.2.96-2.16 2.16-2.16 1.2 0 2.16.96 2.16 2.16 0 1.2-.96 2.16-2.16 2.16zm15 12.84h-3.6v-6.36c0-.96-.84-1.8-1.8-1.8-.96 0-1.8.84-1.8 1.8v6.36H9.6V9.6h3.6v1.44c.6-.96 1.92-1.68 3-1.68 2.28 0 4.2 1.92 4.2 4.2v6.84z"
+                  fill="currentColor"
+                  fill-rule="nonzero"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
