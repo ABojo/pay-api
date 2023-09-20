@@ -3,9 +3,16 @@
 .header {
   @include layout-constrain;
   padding-top: 2.75rem;
-
   display: flex;
   align-items: center;
+  position: relative;
+
+  &__dot {
+    position: absolute;
+    right: -20rem;
+    top: -33rem;
+    z-index: -1;
+  }
 
   &__logo {
     margin-right: 4rem;
