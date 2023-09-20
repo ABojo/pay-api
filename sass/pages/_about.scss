@@ -1,0 +1,81 @@
+@use "../mixins/" as *;
+
+.about {
+  padding-top: 5rem;
+  position: relative;
+
+  &__dot {
+    position: absolute;
+    left: -33rem;
+    top: 33rem;
+    z-index: -1;
+  }
+  &__heading {
+    font-size: var(--fs-6);
+    color: var(--color-blue-2);
+    max-width: 41rem;
+    line-height: 3.5rem;
+    margin-bottom: 4.75rem;
+  }
+
+  &__container {
+    max-width: 57rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    &:first-child {
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  &__title {
+    font-size: var(--fs-4);
+    color: var(--color-blue-2);
+  }
+
+  &__paragraph {
+    max-width: 39.5rem;
+    color: var(--color-blue-1);
+    line-height: var(--lh-p);
+    font-size: var(--fs-1);
+  }
+
+  &__graphic {
+    width: 100%;
+    margin-top: 6rem;
+  }
+
+  &__stats {
+    @include layout-constrain;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 5rem;
+    grid-gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  &__stat {
+    padding-block: 1.25rem;
+    border-top: 1px solid rgba(108, 130, 148, 0.5);
+    border-bottom: 1px solid rgba(108, 130, 148, 0.5);
+
+    h2 {
+      font-family: var(--ff-body);
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+      color: var(--color-blue-1);
+    }
+
+    p {
+      color: var(--color-dark-pink);
+      font-size: var(--fs-6);
+      font-family: var(--ff-heading);
+    }
+  }
+}
