@@ -95,7 +95,15 @@
     <section class="ready">
       <h2 class="ready__heading">Ready to start?</h2>
       <form class="demo">
-        <input class="demo__input" type="text" placeholder="Enter email address" aria-label="Email Address" />
+        <p class="demo__error">Please enter a valid email</p>
+        <p class="demo__success">Thank you, we'll be in touch!</p>
+        <input
+          name="email"
+          class="demo__input"
+          type="text"
+          placeholder="Enter email address"
+          aria-label="Email Address"
+        />
         <button type="submit" class="demo__submit">Schedule a Demo</button>
       </form>
     </section>
@@ -155,5 +163,6 @@
         </ul>
       </div>
     </footer>
+    <script src="/js/index.js"></script>
   </body>
 </html>
