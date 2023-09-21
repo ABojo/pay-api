@@ -4,6 +4,34 @@
   @include layout-constrain;
   padding-top: 5.5rem;
 
+  &__form {
+    position: relative;
+  }
+
+  &__success {
+    position: relative;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &__form--submitted &__success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-dark-pink);
+    font-size: var(--fs-3);
+    font-weight: var(--fw-2);
+    transition: all 0.2s;
+  }
+
   &__heading {
     font-size: var(--fs-6);
     color: var(--color-blue-2);
@@ -91,7 +119,7 @@
 
   &__check {
     position: relative;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     align-items: center;
 
