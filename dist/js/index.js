@@ -1,11 +1,12 @@
 const demoForms = document.querySelectorAll(".demo");
 
 const contactForm = document.querySelector(".contact__form");
+const contactSuccess = document.querySelector(".contact__success");
 const nameInput = document.querySelector('[name="name"]');
 const emailInput = document.querySelector('[name="email"]');
 const messageInput = document.querySelector('[name="message"]');
 
-const invalidInputClass = "contact__input--invalid";
+const invalidInputClass = "field--invalid";
 
 function emailIsValid(email) {
   const regEx = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
@@ -70,7 +71,7 @@ if (contactForm) {
     const formIsValid = nameIsValid && emailIsValid && messageIsValid;
 
     if (formIsValid) {
-      contactForm.classList.add("contact__form--submitted");
+      contactSuccess.classList.add("contact__success--visible");
       //ship data off to backend
     }
   });
