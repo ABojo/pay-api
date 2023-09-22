@@ -13,7 +13,7 @@ This is a website built for a business called PayAPI, and it was built with HTML
 
 ## Links
 
-- You can click [here](https://abojo-devjobs.netlify.app/) to view the website.
+- You can click [here](https://abojo-pay-api.netlify.app/) to view the website.
 
 - You can click [here](https://www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e) to see the design it was based on.
 
