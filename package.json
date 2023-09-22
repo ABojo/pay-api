@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-server": "cd dist && live-server",
-    "start-sass:": "sass -w --no-source-map sass/index.scss dist/css/styles.css",
+    "start-sass:": "sass -w --no-source-map sass/index.scss dist/css/styles.css --style compressed",
     "start": "npm-run-all --parallel start-server start-sass"
   },
   "keywords": [],
