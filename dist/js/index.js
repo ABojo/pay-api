@@ -1,5 +1,9 @@
 const demoForms = document.querySelectorAll(".demo");
 
+const nav = document.querySelector(".header__nav");
+const openNav = document.querySelector(".header__open");
+const closeNav = document.querySelector(".header__close");
+
 const contactForm = document.querySelector(".contact__form");
 const contactSuccess = document.querySelector(".contact__success");
 const nameInput = document.querySelector('[name="name"]');
@@ -12,10 +16,6 @@ function emailIsValid(email) {
   const regEx = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
 
   return regEx.test(email);
-}
-
-function showError(node) {
-  node.classList.add(invalidInputClass);
 }
 
 //not extensible, but this form is unlikely to change so the time required to abstract further isn't worth it
@@ -35,7 +35,7 @@ function inputIsValid(node, type) {
   }
 
   //toggle error state if input is invalid
-  if (!isValid) showError(node.parentElement);
+  if (!isValid) node.parentElement.classList.add(invalidInputClass);
 
   return isValid;
 }
@@ -83,3 +83,11 @@ if (contactForm) {
     });
   });
 }
+
+//hook up nav buttons
+function toggleNav() {
+  nav.classList.toggle("header__nav--open");
+}
+
+openNav.addEventListener("click", toggleNav);
+closeNav.addEventListener("click", toggleNav);
