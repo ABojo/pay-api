@@ -1,9 +1,13 @@
 @use "../mixins/" as *;
+@use "../abstracts/breakpoints" as *;
 
 .demo {
   position: relative;
   width: 27.5rem;
-  height: 3.25rem;
+
+  @media (max-width: $bp-7) {
+    width: 100%;
+  }
 
   &__error {
     position: absolute;
@@ -34,7 +38,7 @@
     align-items: center;
     justify-content: center;
     z-index: -1;
-    border-radius: 2rem;
+    border-radius: 1rem;
     opacity: 0;
   }
 
@@ -56,20 +60,34 @@
     box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
     border: 1px solid transparent;
     transition: all 0.2s;
+    height: 3.25rem;
 
     &::placeholder {
       color: var(--color-blue-1);
+    }
+
+    @media (max-width: $bp-7) {
+      padding-right: 1.5rem;
     }
   }
 
   &--invalid &__input {
     border: 1px solid #f00;
   }
+
   &__submit {
     @include cta-button;
     border: 1px solid transparent;
     height: 100%;
     position: absolute;
     right: 0rem;
+
+    @media (max-width: $bp-7) {
+      position: static;
+      display: block;
+      height: unset;
+      width: 100%;
+      margin-top: 1rem;
+    }
   }
 }

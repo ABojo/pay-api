@@ -1,4 +1,5 @@
 @use "../mixins/" as *;
+@use "../abstracts/breakpoints" as *;
 
 .about {
   padding-top: 5rem;
@@ -9,13 +10,23 @@
     left: -33rem;
     top: 33rem;
     z-index: -1;
+
+    @media (max-width: $bp-5) {
+      display: none;
+    }
   }
+
   &__heading {
     font-size: var(--fs-6);
     color: var(--color-blue-2);
     max-width: 41rem;
     line-height: 3.5rem;
     margin-bottom: 4.75rem;
+
+    @media (max-width: $bp-5) {
+      text-align: center;
+      margin-inline: auto;
+    }
   }
 
   &__container {
@@ -29,6 +40,13 @@
     justify-content: space-between;
     align-items: start;
 
+    @media (max-width: $bp-5) {
+      flex-direction: column;
+      text-align: center;
+      margin: 0 auto;
+      align-items: center;
+    }
+
     &:first-child {
       margin-bottom: 3.5rem;
     }
@@ -37,6 +55,10 @@
   &__title {
     font-size: var(--fs-4);
     color: var(--color-blue-2);
+
+    @media (max-width: $bp-5) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__paragraph {
@@ -58,12 +80,23 @@
     margin-top: 5rem;
     grid-gap: 1.5rem;
     margin-bottom: 4rem;
+
+    @media (max-width: $bp-7) {
+      grid-template-columns: 1fr;
+      border-top: 1px solid rgba(108, 130, 148, 0.5);
+      border-bottom: 1px solid rgba(108, 130, 148, 0.5);
+      text-align: center;
+    }
   }
 
   &__stat {
     padding-block: 1.25rem;
     border-top: 1px solid rgba(108, 130, 148, 0.5);
     border-bottom: 1px solid rgba(108, 130, 148, 0.5);
+
+    @media (max-width: $bp-7) {
+      border: none;
+    }
 
     h2 {
       font-family: var(--ff-body);

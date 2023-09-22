@@ -1,10 +1,26 @@
 @use "../mixins/" as *;
+@use "../abstracts/breakpoints" as *;
 
 .hero {
   @include layout-constrain;
   padding-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $bp-2) {
+    padding-block: 5rem;
+    align-items: center;
+  }
+
+  @media (max-width: $bp-3) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    align-items: center;
+
+    &__demo {
+      margin: 0 auto;
+    }
+  }
 
   &__heading {
     font-size: var(--fs-7);
@@ -13,12 +29,33 @@
     color: var(--color-blue-2);
     margin-top: 8.5rem;
     margin-bottom: 3rem;
+
+    @media (max-width: $bp-2) {
+      max-width: unset;
+      margin-top: 0;
+    }
+
+    @media (max-width: $bp-3) {
+      max-width: 30rem;
+      margin-inline: auto;
+    }
+
+    @media (max-width: $bp-7) {
+      line-height: 3.5rem;
+    }
   }
 
   &__graphic {
     justify-self: center;
     margin-left: 9rem;
     width: 75%;
+
+    @media (max-width: $bp-3) {
+      width: 90%;
+      max-width: 20rem;
+      margin-left: 2.5rem;
+      grid-row: 1 / 2;
+    }
   }
 
   &__contact {
@@ -44,6 +81,33 @@
     top: -10rem;
     right: -9rem;
     z-index: -1;
+
+    @media (max-width: $bp-1) {
+      top: -20rem;
+      right: -18rem;
+    }
+
+    @media (max-width: $bp-3) {
+      right: unset;
+      top: -35rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+
+    @media (max-width: $bp-6) {
+      top: -20rem;
+      width: 110%;
+    }
+
+    @media (max-width: $bp-7) {
+      top: -10rem;
+    }
+
+    @media (max-width: $bp-8) {
+      top: -10rem;
+      width: 120%;
+    }
   }
 }
 
@@ -57,6 +121,12 @@
     position: absolute;
     top: -24rem;
     left: -13.5rem;
+
+    @media (max-width: $bp-3) {
+      top: -30rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__inner {
@@ -67,6 +137,12 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 3.5rem;
+
+    @media (max-width: $bp-3) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -106,6 +182,15 @@
     grid-column-gap: 3rem;
     grid-row-gap: 3rem;
     justify-items: center;
+
+    @media (max-width: $bp-3) {
+      grid-row: 1 / 2;
+    }
+
+    @media (max-width: $bp-7) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+    }
   }
 
   &__logo {
@@ -123,26 +208,60 @@
     z-index: -1;
     right: -35rem;
     top: 29rem;
+
+    @media (max-width: $bp-5) {
+      display: none;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: $bp-3) {
+      grid-template-columns: 1fr;
+      justify-self: center;
+      text-align: center;
+    }
   }
 
   &__form {
     position: relative;
     left: -3.25rem;
+
+    @media (max-width: $bp-3) {
+      margin: 0 auto;
+      left: -1.5rem;
+      width: 100%;
+      max-width: 30rem;
+    }
   }
 
   &__implement {
     margin-top: 7rem;
     margin-left: 1.5rem;
     margin-bottom: 10rem;
+
+    @media (max-width: $bp-3) {
+      margin: 0 auto;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
   }
 
   &__simple {
     margin-top: 14.5rem;
+
+    @media (max-width: $bp-3) {
+      margin-top: unset;
+      margin: 0 auto;
+      grid-row: 4/5;
+      margin-bottom: 10rem;
+    }
+
+    @media (max-width: $bp-6) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__phones {
@@ -150,6 +269,13 @@
     position: relative;
     left: -4rem;
     margin-bottom: 2.5rem;
+
+    @media (max-width: $bp-3) {
+      width: 100%;
+      max-width: 30rem;
+      margin: 0 auto;
+      left: 1.5rem;
+    }
   }
 
   &__heading {
@@ -171,6 +297,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     list-style-type: none;
     gap: 1rem;
+
+    @media (max-width: $bp-6) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 
   &__item {
@@ -193,6 +324,10 @@
       font-size: var(--fs-1);
       color: var(--color-blue-1);
       margin: 0 auto;
+
+      @media (max-width: $bp-6) {
+        max-width: 20rem;
+      }
     }
   }
 }

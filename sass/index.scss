@@ -11,6 +11,8 @@
 @use "./components/checkbox";
 @use "./components/field";
 
+@use "./abstracts/breakpoints" as *;
+
 :root {
   --color-dark-pink: #ba4270;
   --color-water-white: #fbfcfe;
@@ -35,6 +37,26 @@
   --fs-7: 4.5rem;
 
   --lh-p: 1.75rem;
+
+  @media (max-width: $bp-1) {
+    --fs-7: 4rem;
+  }
+
+  @media (max-width: $bp-2) {
+    --fs-7: 3.75rem;
+    --fs-6: 3rem;
+    --fs-5: 2.5rem;
+  }
+
+  @media (max-width: $bp-4) {
+    --fs-6: 2.75rem;
+    --fs-5: 2.25rem;
+    --fs-4: 1.5rem;
+  }
+
+  @media (max-width: $bp-7) {
+    --fs-7: 3rem;
+  }
 }
 
 *,

@@ -1,4 +1,5 @@
 @use "../mixins" as *;
+@use "../abstracts/breakpoints" as *;
 
 .pricing {
   @include layout-constrain;
@@ -8,16 +9,48 @@
     font-size: var(--fs-6);
     color: var(--color-blue-2);
     margin-bottom: 4rem;
+
+    @media (max-width: $bp-5) {
+      text-align: center;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2.5rem;
+
+    @media (max-width: $bp-5) {
+      grid-gap: 1rem;
+    }
+
+    @media (max-width: $bp-6) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 5rem;
+      justify-items: center;
+    }
+
+    @media (max-width: $bp-8) {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem;
+    }
   }
 }
 
 .package {
+  @media (max-width: $bp-6) {
+    text-align: center;
+
+    &--premium {
+      grid-column: 1 / -1;
+    }
+
+    &--premium &__list {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   &__heading {
     color: var(--color-dark-pink);
     font-size: var(--fs-4);
@@ -54,6 +87,7 @@
     align-items: center;
     padding-left: 0.1rem;
     color: var(--color-blue-2);
+    width: 10rem;
 
     &::before {
       content: "";
