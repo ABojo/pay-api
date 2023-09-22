@@ -61,7 +61,11 @@
           </p>
         </div>
       </div>
-      <img class="about__graphic" src="/images/about/desktop/image-team-members.jpg" alt="Team members" />
+      <picture class="about__graphic">
+        <source srcset="/images/about/mobile/image-team-members.jpg" media="(max-width: 28.125em)" />
+        <source srcset="/images/about/tablet/image-team-members.jpg" media="(max-width: 54.375em)" />
+        <img src="/images/about/desktop/image-team-members.jpg" alt="Team members" />
+      </picture>
       <div class="about__stats">
         <div class="about__stat">
           <h2>Team Members</h2>

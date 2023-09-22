@@ -69,8 +69,13 @@
   }
 
   &__graphic {
-    width: 100%;
     margin-top: 6rem;
+    display: block;
+
+    img,
+    source {
+      width: 100%;
+    }
   }
 
   &__stats {
